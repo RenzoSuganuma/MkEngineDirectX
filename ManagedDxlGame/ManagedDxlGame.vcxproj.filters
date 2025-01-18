@@ -575,6 +575,9 @@
     <ClInclude Include="program\library\sgl\sgl_actor.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_blankTestModule.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
     <ClInclude Include="program\library\sgl\sgl_collisionUtility.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
