@@ -28,9 +28,7 @@ namespace MkEngine
 
 		virtual void Initialize() {}
 
-		virtual void Update() {}
-
-		virtual void FixedUpdate() {}
+		virtual void FixedUpdate(float deltaTime) {}
 
 		virtual void DrawGraphics() {}
 

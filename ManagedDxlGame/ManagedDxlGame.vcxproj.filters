@@ -236,11 +236,14 @@
     <ClCompile Include="program\library\MKEngine\MkObject.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="MkTransform.cpp">
-      <Filter>program\[003]engine</Filter>
-    </ClCompile>
     <ClCompile Include="program\library\MKEngine\MkModule.cpp">
       <Filter>program\[003]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\MKEngine\MkTransform.cpp">
+      <Filter>program\[003]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MkBehaviour.cpp">
+      <Filter>program</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -572,11 +575,12 @@
     <ClInclude Include="program\library\MKEngine\MkObject.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="MkTransform.h">
-      <Filter>program\[003]engine</Filter>
-    </ClInclude>
     <ClInclude Include="program\library\MKEngine\MkModule.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
+    <ClInclude Include="program\library\MKEngine\MkTransform.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MkBehaviour.h" />
   </ItemGroup>
 </Project>

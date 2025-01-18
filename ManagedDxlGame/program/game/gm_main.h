@@ -1,5 +1,6 @@
 #pragma once
 
-void gameStart();
-void gameMain( float delta_time );
-void gameEnd();
+void gameInit();
+void gameFixedUpdate(float delta_time);
+void gameDrawGraphics();
+void gameMemRelease();

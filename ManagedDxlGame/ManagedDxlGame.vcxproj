@@ -93,6 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -150,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp" />
-    <ClCompile Include="MkTransform.cpp" />
+    <ClCompile Include="MkBehaviour.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />
     <ClCompile Include="program\dxe\dxe_camera.cpp" />
     <ClCompile Include="program\dxe\dxe_data.cpp" />
@@ -199,6 +201,7 @@
     <ClCompile Include="program\library\MKEngine\MkLevel.cpp" />
     <ClCompile Include="program\library\MKEngine\MkModule.cpp" />
     <ClCompile Include="program\library\MKEngine\MkObject.cpp" />
+    <ClCompile Include="program\library\MKEngine\MkTransform.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />
     <ClCompile Include="program\library\tnl_input.cpp" />
     <ClCompile Include="program\library\tnl_instance.cpp" />
@@ -221,7 +224,7 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MkTransform.h" />
+    <ClInclude Include="MkBehaviour.h" />
     <ClInclude Include="program\dxe\dxe.h" />
     <ClInclude Include="program\dxe\dxe_camera.h" />
     <ClInclude Include="program\dxe\dxe_data.h" />
@@ -304,6 +307,7 @@
     <ClInclude Include="program\library\MKEngine\MkLevel.h" />
     <ClInclude Include="program\library\MKEngine\MkModule.h" />
     <ClInclude Include="program\library\MKEngine\MkObject.h" />
+    <ClInclude Include="program\library\MKEngine\MkTransform.h" />
     <ClInclude Include="program\library\stb_image.h" />
     <ClInclude Include="program\library\tnl_csv.h" />
     <ClInclude Include="program\library\tnl_folder_tree.h" />

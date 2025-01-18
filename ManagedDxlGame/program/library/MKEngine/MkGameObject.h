@@ -25,8 +25,8 @@ namespace MkEngine
 			base::Update();
 		}
 
-		void FixedUpdate() override {
-			base::FixedUpdate();
+		void FixedUpdate(float deltaTime) override {
+			base::FixedUpdate(deltaTime);
 		}
 
 		void DrawGraphics() override {

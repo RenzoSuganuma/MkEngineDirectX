@@ -10,11 +10,7 @@ namespace MkEngine
 
 		}
 
-		virtual void Update() {
-
-		}
-
-		virtual void FixedUpdate() {
+		virtual void FixedUpdate(float deltaTime) {
 
 		}
 
