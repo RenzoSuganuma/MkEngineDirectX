@@ -227,23 +227,23 @@
     <ClCompile Include="program\dxe\dxe_input.cpp">
       <Filter>program\[001] dxe</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkLevel.cpp">
+    <ClCompile Include="program\library\MKEngine\MkBehaviour.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
     <ClCompile Include="program\library\MKEngine\MkGameObject.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkObject.cpp">
+    <ClCompile Include="program\library\MKEngine\MkLevel.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
     <ClCompile Include="program\library\MKEngine\MkModule.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkTransform.cpp">
+    <ClCompile Include="program\library\MKEngine\MkObject.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="MkBehaviour.cpp">
-      <Filter>program</Filter>
+    <ClCompile Include="program\library\MKEngine\MkTransform.cpp">
+      <Filter>program\[003]engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -566,21 +566,23 @@
     <ClInclude Include="program\example\beginner\170_exa_intersect_csv_field_chip.h">
       <Filter>program\[002] example\[001] beginner</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkLevel.h">
+    <ClInclude Include="program\library\MKEngine\MkBehaviour.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
     <ClInclude Include="program\library\MKEngine\MkGameObject.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkObject.h">
+    <ClInclude Include="program\library\MKEngine\MkLevel.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
     <ClInclude Include="program\library\MKEngine\MkModule.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
+    <ClInclude Include="program\library\MKEngine\MkObject.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
     <ClInclude Include="program\library\MKEngine\MkTransform.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="MkBehaviour.h" />
   </ItemGroup>
 </Project>

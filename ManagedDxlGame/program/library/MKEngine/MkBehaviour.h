@@ -1,4 +1,4 @@
-
+#include "MkObject.h"
 
 #pragma once
 namespace MkEngine
@@ -15,7 +15,8 @@ namespace MkEngine
 		Length
 	};
 
-	class MkBehaviour
+	/// <summary>  </summary>
+	class MkBehaviour : public MkEngine::MkObject
 	{
 	private:
 		MkEngine::MkBehaviourType m_type;
@@ -26,12 +27,12 @@ namespace MkEngine
 			return m_type;
 		}
 
-		virtual void Initialize() {}
+		virtual void Initialize() { }
 
-		virtual void FixedUpdate(float deltaTime) {}
+		virtual void FixedUpdate(float deltaTime) { }
 
-		virtual void DrawGraphics() {}
+		virtual void DrawGraphics() { }
 
-		virtual void MemRelease() {}
+		virtual void MemRelease() { }
 	};
 }
