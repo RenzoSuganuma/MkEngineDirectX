@@ -240,7 +240,7 @@
       <Filter>program\[003]engine</Filter>
     </ClCompile>
     <ClCompile Include="program\library\MKEngine\MkModule.cpp">
-      <Filter>program</Filter>
+      <Filter>program\[003]engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -575,6 +575,8 @@
     <ClInclude Include="MkTransform.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkModule.h" />
+    <ClInclude Include="program\library\MKEngine\MkModule.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
