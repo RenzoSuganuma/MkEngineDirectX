@@ -3,7 +3,7 @@
 #include "memory"
 #include "string"
 #include "DxLib.h"
-#include  "sgl_module.h"
+#include "sgl_module.h"
 #include "sgl_transform.h"
 #include "sgl_lang_extention.h"
 
@@ -24,11 +24,11 @@ protected:
 public:
 	AutoProperty(Transform, Transform, m_transform)
 
-	AutoProperty(std::string, Name, m_name)
+		AutoProperty(std::string, Name, m_name)
 
-	DEFCrt_shrd_ptr(Actor)
+		DEFCrt_shrd_ptr(Actor)
 
-	Actor();
+		Actor();
 
 	~Actor();
 
