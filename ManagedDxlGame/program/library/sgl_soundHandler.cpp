@@ -2,7 +2,7 @@
 #include "DxLib.h"
 #include "sgl_soundHandler.h"
 
-namespace sgl {
+namespace sgl::runtime::system {
 	std::unordered_map< std::string, int > soundHandlers;
 
 	const void LoadSoundToMemory(const std::string filePath, const std::string soundKey)

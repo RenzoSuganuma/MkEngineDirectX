@@ -5,40 +5,27 @@
 Component::Component() {}
 Component::~Component() {}
 
-#pragma region virtual-functions
-void Component::Initialize() {}
-void Component::Update(float deltaTime) {}
-void Component::Finalize() {}
-void Component::Release() {}
-void Component::Draw() {}
-#pragma endregion
-
-void Component::__initialize()
+void Component::Initialize()
 {
 	m_enabled = true;
-	Initialize();
 }
 
-void Component::__update(float deltaTime)
+void Component::Update(float deltaTime)
 {
-	Update(deltaTime);
 }
 
-void Component::__finalize()
+void Component::Finalize()
 {
 	m_attachedActor = nullptr;
 	m_enabled = false;
-	Finalize();
 }
 
-void Component::__draw()
+void Component::Draw()
 {
-	Draw();
 }
 
-void Component::__release()
+void Component::MemRelease()
 {
-	Release();
 }
 
 const Actor* const Component::GetActor() const

@@ -131,7 +131,7 @@ void InputHandler::Draw()
 {
 }
 
-void InputHandler::Release()
+void InputHandler::MemRelease()
 {
 }
 

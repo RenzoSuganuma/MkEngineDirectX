@@ -54,7 +54,7 @@ public:
 	// モジュールの描画
 	void Draw() override;
 	// モジュールの内での解放
-	void Release() override;
+	void MemRelease() override;
 	// モジュールの破棄
 	void Finalize() override;
 };

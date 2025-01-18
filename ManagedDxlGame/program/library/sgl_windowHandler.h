@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "map"
-namespace sgl::runtime::system {
+namespace sgl::runtime::system
+{
 
 	extern unsigned int windowWidth_;
 	extern unsigned int windowHeigth_;

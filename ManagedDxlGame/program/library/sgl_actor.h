@@ -3,56 +3,43 @@
 #include "memory"
 #include "string"
 #include "DxLib.h"
-#include "tnl_vector3.h"
-#include "tnl_quaternion.h"
+#include  "sgl_module.h"
+#include "sgl_transform.h"
 #include "sgl_lang_extention.h"
-#include "sgl_managableModules.h"
+
 class Level;
 class Component;
-// ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで
-class Actor : public IManagableModule {
+
+/// <summary> ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで </summary>
+class Actor : public IModule {
 protected:
 	std::list< Component* > m_components;
-	tnl::Vector3 m_position{ 0 };
-	tnl::Quaternion m_rotation;
+	Transform m_transform;
 	Level* m_placedLevel = nullptr;
 	std::string m_name = "";
 	bool m_enabled = true;
-	/* virtual functions FOR override */
+public:
 	// モジュールの初期化
-	virtual void Initialize();
+	void Initialize() override;
 	// モジュールの更新
-	virtual void Update(float delta_time);
+	void Update(float delta_time) override;
 	// モジュールの描画
-	virtual void Draw();
+	void Draw() override;
 	// モジュールの内での解放
-	virtual void Release();
+	void MemRelease() override;
 	// モジュールの破棄
-	virtual void Finalize();
+	void Finalize() override;
 	/* auto properties */
 public:
-	AutoProperty(tnl::Vector3, Position, m_position)
-		AutoProperty(tnl::Quaternion, Rotation, m_rotation)
-		Getter(std::string, Name, m_name)
-		DEF_Create_shared_ptr(Actor)
+	AutoProperty(Transform, Transform, m_transform)
+	AutoProperty(std::string, Name, m_name)
+	DEFCrt_shrd_ptr(Actor)
 public:
 
 	Actor();
 	~Actor();
 
-	// モジュールの初期化
-	void __initialize();
-	// モジュールの更新
-	void __update(float delta_time);
-	// モジュールの描画
-	void __draw();
-	// モジュール内での解放
-	void __release();
-	// モジュールの破棄
-	void __finalize();
-
 	/* statics */
-	//
 	static Actor* Create() {
 		return new Actor;
 	}
@@ -62,7 +49,6 @@ public:
 	void const RemoveComponent(const std::list<Component*>::iterator place);
 	void const SetPlacedLevel(const Level* level);
 	/* templates */
-	//
 	template<typename T>
 	static T GetComponent(const Actor* getComponentFrom)
 	{

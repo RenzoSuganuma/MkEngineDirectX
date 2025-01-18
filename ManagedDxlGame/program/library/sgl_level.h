@@ -3,11 +3,11 @@
 #include "memory"
 #include "sgl_fpsCamera.h"
 #include "sgl_lang_extention.h"
-#include "sgl_managableModules.h"
+#include "sgl_module.h"
 // 前方定義
 class Actor;
 // Unityでいうシーン、すべてのアクタが存在するクラス。
-class Level final : IManagableModule {
+class Level final : IModule {
 private:
 	std::list< Actor* > m_actors;
 public:
@@ -18,13 +18,13 @@ public:
 		return new Level;
 	}
 
-	DEF_Create_shared_ptr(Level)
+	DEFCrt_shrd_ptr(Level)
 public:
-	void  Initialize();
-	void  Update(float deltaTime);
-	void  Draw();
-	void  Finalize();
-	void  Release();
+	void  Initialize() override;
+	void  Update(float deltaTime) override;
+	void  Draw() override;
+	void  Finalize() override;
+	void  MemRelease() override;
 
 	void DrawActorList();
 	const std::list< Actor* >::iterator

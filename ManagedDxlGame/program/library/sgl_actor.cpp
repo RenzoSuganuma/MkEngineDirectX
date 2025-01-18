@@ -6,15 +6,7 @@
 Actor::Actor() {}
 Actor::~Actor() {}
 
-#pragma region virtual-funcitons
-void Actor::Initialize() {}
-void Actor::Update(float deltaTime) {}
-void Actor::Release() {}
-void Actor::Finalize() {}
-void Actor::Draw() {}
-#pragma endregion
-
-void Actor::__initialize()
+void Actor::Initialize()
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
@@ -23,10 +15,9 @@ void Actor::__initialize()
 		it++;
 	}
 	m_enabled = true;
-	Initialize();
 }
 
-void Actor::__update(float deltaTime)
+void Actor::Update(float deltaTime)
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
@@ -34,10 +25,9 @@ void Actor::__update(float deltaTime)
 		(*it)->Update(deltaTime);
 		it++;
 	}
-	Update(deltaTime);
 }
 
-void Actor::__draw()
+void Actor::Draw()
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
@@ -45,22 +35,20 @@ void Actor::__draw()
 		(*it)->Draw();
 		it++;
 	}
-	Draw();
 }
 
-void Actor::__release()
+void Actor::MemRelease()
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
 	{
-		(*it)->Release();
+		(*it)->MemRelease();
 		it++;
 	}
 	m_components.clear();
-	Release();
 }
 
-void Actor::__finalize()
+void Actor::Finalize()
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
@@ -70,9 +58,7 @@ void Actor::__finalize()
 	}
 	m_enabled = false;
 	m_placedLevel = nullptr;
-	Finalize();
 }
-
 
 std::list< Component* >::iterator
 const Actor::AddComponent(Component* component)

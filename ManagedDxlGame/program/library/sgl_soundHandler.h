@@ -2,10 +2,12 @@
 #include "list"
 #include "string"
 #include "unordered_map"
-namespace sgl {
+namespace sgl::runtime::system 
+{
 
 	// サウンド再生モード
-	enum class SoundPlayMode {
+	enum class SoundPlayMode 
+	{
 		Normal,
 		BackGround,
 		Loop

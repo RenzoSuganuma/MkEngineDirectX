@@ -201,8 +201,10 @@
     <ClCompile Include="program\library\sgl_fpsCamera.cpp" />
     <ClCompile Include="program\library\sgl_inputHandler.cpp" />
     <ClCompile Include="program\library\sgl_level.cpp" />
+    <ClCompile Include="program\library\sgl_object.cpp" />
     <ClCompile Include="program\library\sgl_soundHandler.cpp" />
     <ClCompile Include="program\library\sgl_stateMachine.cpp" />
+    <ClCompile Include="program\library\sgl_transform.cpp" />
     <ClCompile Include="program\library\sgl_windowHandler.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />
     <ClCompile Include="program\library\tnl_input.cpp" />
@@ -305,7 +307,6 @@
     <ClInclude Include="program\game\gm_main.h" />
     <ClInclude Include="program\library\json11.hpp" />
     <ClInclude Include="program\library\sgl_actor.h" />
-    <ClInclude Include="program\library\sgl_blankTestModule.h" />
     <ClInclude Include="program\library\sgl_collisionUtility.h" />
     <ClInclude Include="program\library\sgl_component.h" />
     <ClInclude Include="program\library\sgl_DirectXUtility.h" />
@@ -313,11 +314,13 @@
     <ClInclude Include="program\library\sgl_inputHandler.h" />
     <ClInclude Include="program\library\sgl_lang_extention.h" />
     <ClInclude Include="program\library\sgl_level.h" />
-    <ClInclude Include="program\library\sgl_managableModules.h" />
+    <ClInclude Include="program\library\sgl_module.h" />
+    <ClInclude Include="program\library\sgl_object.h" />
     <ClInclude Include="program\library\sgl_smTransition.h" />
     <ClInclude Include="program\library\sgl_soundHandler.h" />
     <ClInclude Include="program\library\sgl_stateMachine.h" />
     <ClInclude Include="program\library\sgl_stateMachineBehaviour.h" />
+    <ClInclude Include="program\library\sgl_transform.h" />
     <ClInclude Include="program\library\sgl_windowHandler.h" />
     <ClInclude Include="program\library\stb_image.h" />
     <ClInclude Include="program\library\tnl_csv.h" />

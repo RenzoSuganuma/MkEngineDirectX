@@ -1,27 +1,16 @@
 ﻿#pragma once
 #include "memory"
 #include "sgl_lang_extention.h"
-#include "sgl_managableModules.h"
+#include "sgl_module.h"
 // 前方定義
 class Actor;
-// アクターへ機能を追加する際にこれに機能の実装をしてアクタへアタッチする
-// コンポーネントクラスの基底クラス
-class Component : public IManagableModule {
+/// <summary> コンポーネント </summary>
+class Component : public IModule {
 protected:
 	const Actor* m_attachedActor = nullptr;
-
-	// モジュールの初期化
-	void __initialize();
-	// モジュールの更新
-	void __update(float delta_time);
-	// モジュールの描画
-	void __draw();
-	// モジュール内での解放
-	void __release();
-	// モジュールの破棄
-	void __finalize();
+	using base = Component;
 public:
-	DEF_Create_shared_ptr(Component)
+	DEFCrt_shrd_ptr(Component)
 public:
 	bool m_enabled = true;
 
@@ -33,15 +22,15 @@ public:
 	}
 
 	// モジュールの初期化
-	void Initialize();
+	void Initialize() override;
 	// モジュールの更新
-	void Update(float delta_time);
+	void Update(float delta_time) override;
 	// モジュールの描画
-	void Draw();
+	void Draw() override;
 	// モジュールの内での解放
-	void Release();
+	void MemRelease() override;
 	// モジュールの破棄
-	void Finalize();
+	void Finalize() override;
 	const Actor* const GetActor() const;
 	void const SetActor(const Actor* actor);
 };

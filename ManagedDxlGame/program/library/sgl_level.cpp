@@ -12,7 +12,7 @@ void  Level::Initialize()
 	auto itr = m_actors.begin();
 	while (itr != m_actors.end())
 	{
-		(*itr)->__initialize();
+		(*itr)->Initialize();
 		itr++;
 	}
 }
@@ -22,8 +22,7 @@ void  Level::Update(float deltaTime)
 	auto itr = m_actors.begin();
 	while (itr != m_actors.end())
 	{
-		(*itr)->__update(deltaTime);
-		(*itr)->__draw();
+		(*itr)->Update(deltaTime);
 		itr++;
 	}
 }
@@ -33,7 +32,7 @@ void  Level::Draw()
 	auto itr = m_actors.begin();
 	while (itr != m_actors.end())
 	{
-		(*itr)->__draw();
+		(*itr)->Draw();
 		itr++;
 	}
 }
@@ -43,17 +42,17 @@ void  Level::Finalize()
 	auto it = m_actors.begin();
 	while (it != m_actors.end())
 	{
-		(*it)->__finalize();
+		(*it)->Finalize();
 		++it;
 	}
 }
 
-void  Level::Release()
+void  Level::MemRelease()
 {
 	auto it = m_actors.begin();
 	while (it != m_actors.end())
 	{
-		(*it)->__release();
+		(*it)->MemRelease();
 		++it;
 	}
 	m_actors.clear();
