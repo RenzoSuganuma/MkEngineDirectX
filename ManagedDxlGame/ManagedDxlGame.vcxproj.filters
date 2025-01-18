@@ -227,22 +227,28 @@
     <ClCompile Include="program\dxe\dxe_input.cpp">
       <Filter>program\[001] dxe</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkBehaviour.cpp">
+    <ClCompile Include="program\library\sgl\sgl_actor.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkGameObject.cpp">
+    <ClCompile Include="program\library\sgl\sgl_component.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkLevel.cpp">
+    <ClCompile Include="program\library\sgl\sgl_fpsCamera.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkModule.cpp">
+    <ClCompile Include="program\library\sgl\sgl_inputHandler.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkObject.cpp">
+    <ClCompile Include="program\library\sgl\sgl_level.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\MKEngine\MkTransform.cpp">
+    <ClCompile Include="program\library\sgl\sgl_soundHandler.cpp">
+      <Filter>program\[003]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\sgl\sgl_stateMachine.cpp">
+      <Filter>program\[003]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\sgl\sgl_windowHandler.cpp">
       <Filter>program\[003]engine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -566,22 +572,49 @@
     <ClInclude Include="program\example\beginner\170_exa_intersect_csv_field_chip.h">
       <Filter>program\[002] example\[001] beginner</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkBehaviour.h">
+    <ClInclude Include="program\library\sgl\sgl_actor.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkGameObject.h">
+    <ClInclude Include="program\library\sgl\sgl_blankTestModule.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkLevel.h">
+    <ClInclude Include="program\library\sgl\sgl_collisionUtility.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkModule.h">
+    <ClInclude Include="program\library\sgl\sgl_component.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkObject.h">
+    <ClInclude Include="program\library\sgl\sgl_DirectXUtility.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\MKEngine\MkTransform.h">
+    <ClInclude Include="program\library\sgl\sgl_fpsCamera.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_inputHandler.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_lang_extention.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_level.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_managableModules.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_smTransition.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_soundHandler.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_stateMachine.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_stateMachineBehaviour.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\sgl\sgl_windowHandler.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
   </ItemGroup>
