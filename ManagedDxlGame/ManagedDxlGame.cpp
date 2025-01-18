@@ -141,11 +141,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		dxe::SetDeltaTime(delta_time);
 		gameFixedUpdate(delta_time);
 
-		// 描画処理
-		gameDrawGraphics();
-
 		// バックバッファをフリップ
 		ScreenFlip();
+
+		// 描画処理
+		gameDrawGraphics();
 
 		if (dxe::IsExitApplication()) break;
 
