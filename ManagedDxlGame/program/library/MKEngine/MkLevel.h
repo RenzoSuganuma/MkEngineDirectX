@@ -1,8 +1,9 @@
 #pragma once
-
-// ƒŒƒxƒ‹
-class MkLevel
+namespace MkEngine
 {
+	// ƒŒƒxƒ‹
+	class MkLevel
+	{
 
-};
-
+	};
+}

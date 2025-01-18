@@ -1,5 +1,7 @@
 #pragma once
-class MkObject
+namespace MkEngine
 {
-};
-
+	class MkObject
+	{
+	};
+}

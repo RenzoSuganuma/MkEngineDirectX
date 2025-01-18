@@ -1,7 +1,40 @@
+#include "MkModule.h"
+#include "MkTransform.h"
+
 #pragma once
-
-// ゲームオブジェクト
-class MkGameObject
+namespace MkEngine
 {
-};
+	/// <summary> ゲームオブジェクト </summary>
+	class MkGameObject final : public MkEngine::MkModule
+	{
+	private:
+		using base = MkEngine::MkModule;
+		MkEngine::MkTransform m_transform;
 
+	public:
+		const MkEngine::MkTransform& get_Transform()
+		{
+			return m_transform;
+		}
+
+		void Initialize() override {
+			base::Initialize();
+		}
+
+		void Update() override {
+			base::Update();
+		}
+
+		void FixedUpdate() override {
+			base::FixedUpdate();
+		}
+
+		void DrawGraphics() override {
+			base::DrawGraphics();
+		}
+
+		void MemRelease() override {
+			base::MemRelease();
+		}
+	};
+}
