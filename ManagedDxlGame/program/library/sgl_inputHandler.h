@@ -52,7 +52,7 @@ public:
 	// モジュールの更新
 	void Update(float delta_time) override;
 	// モジュールの描画
-	void Draw() override;
+	void DrawGraphics() override;
 	// モジュールの内での解放
 	void MemRelease() override;
 	// モジュールの破棄

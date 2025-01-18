@@ -3,6 +3,7 @@
 #include "sgl_component.h"
 
 Component::Component() {}
+
 Component::~Component() {}
 
 void Component::Initialize()
@@ -20,7 +21,7 @@ void Component::Finalize()
 	m_enabled = false;
 }
 
-void Component::Draw()
+void Component::DrawGraphics()
 {
 }
 

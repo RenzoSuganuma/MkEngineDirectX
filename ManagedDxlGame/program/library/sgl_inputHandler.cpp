@@ -127,7 +127,7 @@ void InputHandler::Update(float deltaTime)
 	CheckInputCanceled();
 }
 
-void InputHandler::Draw()
+void InputHandler::DrawGraphics()
 {
 }
 

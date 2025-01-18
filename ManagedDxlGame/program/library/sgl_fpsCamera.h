@@ -1,22 +1,23 @@
-#if 0
 #pragma once
+
+#include "sgl.h"
 #include "functional"
 #include "../dxe/dxe.h"
 #include "tnl_vector3.h"
-#include "sgl_lang_extention.h"
-#include "sgl_managableModules.h"
 
 // FPSカメラ
-class FPSCamera : public dxe::Camera {
+class FPSCamera : public dxe::Camera, IModule {
+private :
+	tnl::Quaternion m_rotation;
+
 public:
-	DEF_Create_shared_ptr(FPSCamera)
-public:
-	FPSCamera() {};
+	DEFCrt_shrd_ptr(FPSCamera)
+
+		FPSCamera() {};
 	FPSCamera(float screen_w, float screen_h) : dxe::Camera(screen_w, screen_h) {}
 
 	// モジュールの初期化
 	void Initialize() override {
-
 	}
 
 	// モジュールの更新
@@ -34,22 +35,24 @@ public:
 						-up().xy()
 					};
 					addPosition(v[ind] * 3.0f);
+
 				}, eKeys::KB_A, eKeys::KB_D, eKeys::KB_W, eKeys::KB_S, eKeys::KB_E, eKeys::KB_Q);
 			auto vlook = tnl::Input::GetMouseVelocity();
 			m_rotation *= tnl::Quaternion::RotationAxis({ 0,1,0 }, tnl::ToRadian(vlook.x * 0.1f));
 			m_rotation *= tnl::Quaternion::RotationAxis(right(), tnl::ToRadian(vlook.y * 0.1f));
+
 			// 姿勢パラメータからターゲット座標とアッパーベクトルを計算
-			target_ = m_position + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
+			target_ = position_ + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
 			up_ = tnl::Vector3::TransformCoord({ 0, 1, 0 }, m_rotation);
 		}
-		dxe::Camera::update();
+		Camera::update();
 	}
 
 	// モジュールの描画
-	void Draw() override {}
+	void DrawGraphics() override {}
 
 	// モジュールの内での解放
-	void Release() override {}
+	void MemRelease() override {}
 
 	// モジュールの破棄
 	void Finalize() override {}
@@ -61,13 +64,12 @@ public:
 	inline tnl::Vector3 down() { return -up(); }
 
 	inline tnl::Vector3 forward() override {
-		target_ = m_position + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
-		return tnl::Vector3::Normalize(target_ - m_position);
+		target_ = position_ + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
+		return tnl::Vector3::Normalize(target_ - position_);
 	}
 	inline tnl::Vector3 back() override { return -forward(); }
 	inline tnl::Vector3 left() override { return tnl::Vector3::Cross(forward(), up()); }
 	inline tnl::Vector3 right() override { return tnl::Vector3::Cross(up(), forward()); }
 
 };
-#endif
 

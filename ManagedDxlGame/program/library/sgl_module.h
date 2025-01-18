@@ -11,7 +11,7 @@ public:
 	// モジュールの更新
 	virtual void Update(float delta_time) = 0;
 	// モジュールの描画
-	virtual void Draw() = 0;
+	virtual void DrawGraphics() = 0;
 	// モジュールの内での解放
 	virtual void MemRelease() = 0;
 	// モジュールの破棄

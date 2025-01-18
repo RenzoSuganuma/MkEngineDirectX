@@ -27,12 +27,12 @@ void  Level::Update(float deltaTime)
 	}
 }
 
-void  Level::Draw()
+void  Level::DrawGraphics()
 {
 	auto itr = m_actors.begin();
 	while (itr != m_actors.end())
 	{
-		(*itr)->Draw();
+		(*itr)->DrawGraphics();
 		itr++;
 	}
 }

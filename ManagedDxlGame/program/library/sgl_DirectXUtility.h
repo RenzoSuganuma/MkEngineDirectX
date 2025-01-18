@@ -9,7 +9,8 @@ using DxBSphere = DirectX::BoundingSphere;
 // DirectX::BoundingFrustum
 using DxBFrustum = DirectX::BoundingFrustum;
 /// <summary> DirectXユーティリティ </summary>
-class DxUtil {
+class DxUtil 
+{
 public:
 	// ２次元ベクトル
 	static DirectX::XMFLOAT2 float2(float x, float y) {

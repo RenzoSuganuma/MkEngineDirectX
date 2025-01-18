@@ -195,6 +195,8 @@
     <ClCompile Include="program\dxe\mesh\dxe_mesh_mtrl_gui_controller.cpp" />
     <ClCompile Include="program\dxe\OBJLoader.cpp" />
     <ClCompile Include="program\game\gm_main.cpp" />
+    <ClCompile Include="program\game\TestActor.cpp" />
+    <ClCompile Include="program\game\TestComponent.cpp" />
     <ClCompile Include="program\library\json11.cpp" />
     <ClCompile Include="program\library\sgl_actor.cpp" />
     <ClCompile Include="program\library\sgl_component.cpp" />
@@ -305,7 +307,10 @@
     <ClInclude Include="program\example\util\exa_mediator.h" />
     <ClInclude Include="program\example\util\exa_single_oscillationy.h" />
     <ClInclude Include="program\game\gm_main.h" />
+    <ClInclude Include="program\game\TestActor.h" />
+    <ClInclude Include="program\game\TestComponent.h" />
     <ClInclude Include="program\library\json11.hpp" />
+    <ClInclude Include="program\library\sgl.h" />
     <ClInclude Include="program\library\sgl_actor.h" />
     <ClInclude Include="program\library\sgl_collisionUtility.h" />
     <ClInclude Include="program\library\sgl_component.h" />

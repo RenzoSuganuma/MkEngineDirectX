@@ -45,4 +45,4 @@ void set##name( const type& value )\
 #define DEFCrt_shrd_ptr(type)\
 static std::shared_ptr<type> CreateShared() {\
 return std::make_shared<type>();\
-}
+}\

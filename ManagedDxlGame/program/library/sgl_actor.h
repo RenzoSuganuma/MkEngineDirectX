@@ -14,41 +14,50 @@ class Component;
 class Actor : public IModule {
 protected:
 	std::list< Component* > m_components;
-	Transform m_transform;
 	Level* m_placedLevel = nullptr;
+
+	Transform m_transform;
 	std::string m_name = "";
 	bool m_enabled = true;
-public:
-	// モジュールの初期化
-	void Initialize() override;
-	// モジュールの更新
-	void Update(float delta_time) override;
-	// モジュールの描画
-	void Draw() override;
-	// モジュールの内での解放
-	void MemRelease() override;
-	// モジュールの破棄
-	void Finalize() override;
-	/* auto properties */
+	using base = Actor;
+
 public:
 	AutoProperty(Transform, Transform, m_transform)
+
 	AutoProperty(std::string, Name, m_name)
+
 	DEFCrt_shrd_ptr(Actor)
-public:
 
 	Actor();
+
 	~Actor();
 
-	/* statics */
+	// モジュールの初期化
+	void Initialize() override;
+
+	// モジュールの更新
+	void Update(float delta_time) override;
+
+	// モジュールの描画
+	void DrawGraphics() override;
+
+	// モジュールの内での解放
+	void MemRelease() override;
+
+	// モジュールの破棄
+	void Finalize() override;
+
 	static Actor* Create() {
 		return new Actor;
 	}
 
 	std::list< Component* >::iterator
 		const AddComponent(Component* component);
+
 	void const RemoveComponent(const std::list<Component*>::iterator place);
+
 	void const SetPlacedLevel(const Level* level);
-	/* templates */
+
 	template<typename T>
 	static T GetComponent(const Actor* getComponentFrom)
 	{

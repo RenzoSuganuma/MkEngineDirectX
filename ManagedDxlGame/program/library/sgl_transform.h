@@ -12,6 +12,9 @@ private:
 
 public:
 	AutoProperty(tnl::Vector3, Position, m_position)
-	AutoProperty(tnl::Quaternion, Rotation, m_rotation)
-};
+		AutoProperty(tnl::Quaternion, Rotation, m_rotation)
 
+		void RotateAxis(const tnl::Vector3& axis, float angle) {
+		m_rotation *= tnl::Quaternion::RotationAxis(axis, angle);
+	}
+};

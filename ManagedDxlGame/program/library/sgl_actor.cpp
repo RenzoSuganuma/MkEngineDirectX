@@ -4,6 +4,7 @@
 #include "sgl_level.h"
 
 Actor::Actor() {}
+
 Actor::~Actor() {}
 
 void Actor::Initialize()
@@ -27,12 +28,12 @@ void Actor::Update(float deltaTime)
 	}
 }
 
-void Actor::Draw()
+void Actor::DrawGraphics()
 {
 	auto it = m_components.begin();
 	while (it != m_components.end())
 	{
-		(*it)->Draw();
+		(*it)->DrawGraphics();
 		it++;
 	}
 }

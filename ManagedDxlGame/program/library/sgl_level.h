@@ -22,7 +22,7 @@ public:
 public:
 	void  Initialize() override;
 	void  Update(float deltaTime) override;
-	void  Draw() override;
+	void  DrawGraphics() override;
 	void  Finalize() override;
 	void  MemRelease() override;
 
