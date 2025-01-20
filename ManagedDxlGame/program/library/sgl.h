@@ -15,4 +15,3 @@
 #include "sgl_stateMachine.h"
 #include "sgl_stateMachineBehaviour.h"
 #include "sgl_transform.h"
-#include "sgl_windowHandler.h"
