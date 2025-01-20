@@ -1,10 +1,11 @@
 ﻿#pragma once
+
 #include "list"
 #include "string"
 #include "unordered_map"
+
 namespace sgl::runtime::system 
 {
-
 	// サウンド再生モード
 	enum class SoundPlayMode 
 	{
@@ -20,6 +21,5 @@ namespace sgl::runtime::system
 	extern void PlaySoundFromMemory(const int soundHandler, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);
 
 	extern void PlaySoundFromMemory(const std::string soundKey, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);
-
 }
 
