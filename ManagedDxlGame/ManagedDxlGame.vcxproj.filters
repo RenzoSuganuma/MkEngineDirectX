@@ -254,9 +254,6 @@
     <ClCompile Include="program\library\sgl_transform.cpp">
       <Filter>program\[000] library</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\sgl_windowHandler.cpp">
-      <Filter>program\[000] library</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManagedDxlGame.rc">
@@ -624,9 +621,6 @@
       <Filter>program\[000] library</Filter>
     </ClInclude>
     <ClInclude Include="program\library\sgl_transform.h">
-      <Filter>program\[000] library</Filter>
-    </ClInclude>
-    <ClInclude Include="program\library\sgl_windowHandler.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
   </ItemGroup>

@@ -205,7 +205,6 @@
     <ClCompile Include="program\library\sgl_soundHandler.cpp" />
     <ClCompile Include="program\library\sgl_stateMachine.cpp" />
     <ClCompile Include="program\library\sgl_transform.cpp" />
-    <ClCompile Include="program\library\sgl_windowHandler.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />
     <ClCompile Include="program\library\tnl_input.cpp" />
     <ClCompile Include="program\library\tnl_instance.cpp" />
@@ -322,7 +321,6 @@
     <ClInclude Include="program\library\sgl_stateMachine.h" />
     <ClInclude Include="program\library\sgl_stateMachineBehaviour.h" />
     <ClInclude Include="program\library\sgl_transform.h" />
-    <ClInclude Include="program\library\sgl_windowHandler.h" />
     <ClInclude Include="program\library\stb_image.h" />
     <ClInclude Include="program\library\tnl_csv.h" />
     <ClInclude Include="program\library\tnl_folder_tree.h" />
