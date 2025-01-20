@@ -61,8 +61,8 @@ void Actor::Finalize()
 	m_placedLevel = nullptr;
 }
 
-std::list< Component* >::iterator
-const Actor::AddComponent(Component* component)
+std::list<std::shared_ptr<Component>>::iterator
+const Actor::AddComponent(const std::shared_ptr<Component>& component)
 {
 	component->SetActor(this);
 	m_components.emplace_back(component);
@@ -71,12 +71,12 @@ const Actor::AddComponent(Component* component)
 	return it;
 }
 
-void const Actor::RemoveComponent(const std::list<Component*>::iterator place)
+void const Actor::RemoveComponent(const std::list<std::shared_ptr<Component>>::iterator place)
 {
 	m_components.erase(place);
 }
 
-void const Actor::SetPlacedLevel(const Level* level)
+void const Actor::SetPlacedLevel(Level* level)
 {
-	m_placedLevel = const_cast<Level*>(level);
+	m_placedLevel.reset(level);
 }

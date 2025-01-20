@@ -29,13 +29,13 @@ void Component::MemRelease()
 {
 }
 
-const Actor* const Component::GetActor() const
+const std::shared_ptr<Actor> const Component::GetActor() const
 {
 	return m_attachedActor;
 }
 
-void const Component::SetActor(const Actor* actor)
+void const Component::SetActor(Actor * actor)
 {
-	m_attachedActor = actor;
+	m_attachedActor.reset(actor);
 }
 

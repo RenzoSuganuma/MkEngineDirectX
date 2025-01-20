@@ -55,7 +55,7 @@ void  Level::MemRelease()
 		(*it)->MemRelease();
 		++it;
 	}
-	m_actors.clear();
+	// m_actors.clear();
 }
 
 void Level::DrawActorList()
@@ -72,22 +72,17 @@ void Level::DrawActorList()
 	}
 }
 
-const std::list< Actor* >::iterator
-const Level::AddActor(const Actor* obj)
+const std::list< std::shared_ptr<Actor> >::iterator
+const Level::AddActor(const std::shared_ptr<Actor>& obj)
 {
-	const_cast<Actor*>(obj)->SetPlacedLevel(this);
-	m_actors.emplace_back(const_cast<Actor*>(obj));
+	obj.get()->SetPlacedLevel(this);
+	m_actors.emplace_back(obj.get());
 	auto it = m_actors.end();
 	it--;
 	return it;
 }
 
-void const Level::RemoveActor(const Actor* obj)
+void const Level::RemoveActor(const std::shared_ptr<Actor>& obj)
 {
-	m_actors.remove(const_cast<Actor*>(obj));
-}
-
-void const Level::RemoveActor(const std::list< Actor* >::iterator place)
-{
-	m_actors.erase(place);
+	m_actors.remove(obj);
 }

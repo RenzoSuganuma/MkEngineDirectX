@@ -7,9 +7,9 @@
 class Actor;
 
 /// <summary> コンポーネント </summary>
-class Component : public IModule {
+class Component : public IModule , std::enable_shared_from_this<Component> {
 protected:
-	const Actor* m_attachedActor = nullptr;
+	std::shared_ptr<Actor> m_attachedActor;
 	bool m_enabled = true;
 	using base = Component;
 
@@ -21,10 +21,6 @@ public:
 	Component();
 
 	~Component();
-
-	static Component* Create() {
-		return new Component;
-	}
 
 	// モジュールの初期化
 	void Initialize() override;
@@ -41,7 +37,9 @@ public:
 	// モジュールの破棄
 	void Finalize() override;
 
-	const Actor* const GetActor() const;
+	/// <summary> アクターの取得 </summary>
+	const std::shared_ptr<Actor> const GetActor() const;
 
-	void const SetActor(const Actor* actor);
+	/// <summary> アクターの割り当て NOTE: thisポインタで渡されるため生ポインター渡し </summary>
+	void const SetActor(Actor * actor);
 };

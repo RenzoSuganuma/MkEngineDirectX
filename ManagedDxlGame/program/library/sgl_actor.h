@@ -11,10 +11,10 @@ class Level;
 class Component;
 
 /// <summary> ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで </summary>
-class Actor : public IModule {
+class Actor : public IModule , std::enable_shared_from_this<Actor> {
 protected:
-	std::list< Component* > m_components;
-	Level* m_placedLevel = nullptr;
+	std::list<std::shared_ptr<Component>> m_components;
+	std::shared_ptr<Level> m_placedLevel;
 
 	Transform m_transform;
 	std::string m_name = "";
@@ -24,11 +24,11 @@ protected:
 public:
 	AutoProperty(Transform, Transform, m_transform)
 
-		AutoProperty(std::string, Name, m_name)
+	AutoProperty(std::string, Name, m_name)
 
-		DEFCrt_shrd_ptr(Actor)
+	DEFCrt_shrd_ptr(Actor)
 
-		Actor();
+	Actor();
 
 	~Actor();
 
@@ -47,24 +47,24 @@ public:
 	// モジュールの破棄
 	void Finalize() override;
 
-	static Actor* Create() {
-		return new Actor;
-	}
+	/// <summary> コンポーネントの追加 </summary>
+	std::list<std::shared_ptr<Component>>::iterator
+		const AddComponent(const std::shared_ptr<Component>& component);
 
-	std::list< Component* >::iterator
-		const AddComponent(Component* component);
+	/// <summary> コンポーネントの削除 </summary>
+	void const RemoveComponent(const std::list<std::shared_ptr<Component>>::iterator place);
 
-	void const RemoveComponent(const std::list<Component*>::iterator place);
+	/// <summary> レベルの割り当て NOTE: 生ポインタからスマートポインタを生成すつので生ポインタ渡し </summary>
+	void const SetPlacedLevel(Level * level);
 
-	void const SetPlacedLevel(const Level* level);
-
+	/// <summary> コンポーネントの取得 </summary>
 	template<typename T>
-	static T GetComponent(const Actor* getComponentFrom)
+	static T GetComponent(const std::shared_ptr<Actor>& getComponentFrom)
 	{
 		auto it = getComponentFrom->m_components.begin();
 		while (it != getComponentFrom->m_components.end())
 		{
-			auto r = static_cast<T>(*it);
+			auto r = static_cast<T>((*it).get());
 			if (r != nullptr)
 			{
 				return r;

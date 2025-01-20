@@ -7,16 +7,16 @@
 #include "TestComponent.h"
 
 auto level = std::make_shared<Level>();
-auto obj = std::make_shared<TestActor>();
+auto obj = std::make_shared<TestActor>(  );
 auto component = std::make_shared<TestComponent>();
 auto cam = std::make_shared<FPSCamera>( DXE_WINDOW_WIDTH_F, DXE_WINDOW_HEIGHT_F );
 
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameInit() {
-	obj.get()->AddComponent(component.get());
+	obj.get()->AddComponent(component);
 
-	level.get()->AddActor(obj.get());
+	level.get()->AddActor(obj);
 
 	level.get()->Initialize();
 }

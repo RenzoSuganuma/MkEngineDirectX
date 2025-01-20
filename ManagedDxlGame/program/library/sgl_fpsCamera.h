@@ -14,7 +14,7 @@ private :
 public:
 	DEFCrt_shrd_ptr(FPSCamera)
 
-		FPSCamera() {};
+	FPSCamera() {};
 	FPSCamera(float screen_w, float screen_h) : dxe::Camera(screen_w, screen_h) {}
 
 	void SetFreeLookMode(bool isFreelook) {
@@ -66,15 +66,18 @@ public:
 		up_ = tnl::Vector3::TransformCoord({ 0, 1, 0 }, m_rotation);
 		return up_;
 	}
+
 	inline tnl::Vector3 down() { return -up(); }
 
 	inline tnl::Vector3 forward() override {
 		target_ = position_ + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
 		return tnl::Vector3::Normalize(target_ - position_);
 	}
-	inline tnl::Vector3 back() override { return -forward(); }
-	inline tnl::Vector3 left() override { return tnl::Vector3::Cross(forward(), up()); }
-	inline tnl::Vector3 right() override { return tnl::Vector3::Cross(up(), forward()); }
 
+	inline tnl::Vector3 back() override { return -forward(); }
+
+	inline tnl::Vector3 left() override { return tnl::Vector3::Cross(forward(), up()); }
+	
+	inline tnl::Vector3 right() override { return tnl::Vector3::Cross(up(), forward()); }
 };
 
