@@ -199,7 +199,6 @@
     <ClCompile Include="program\library\sgl_actor.cpp" />
     <ClCompile Include="program\library\sgl_component.cpp" />
     <ClCompile Include="program\library\sgl_fpsCamera.cpp" />
-    <ClCompile Include="program\library\sgl_inputHandler.cpp" />
     <ClCompile Include="program\library\sgl_level.cpp" />
     <ClCompile Include="program\library\sgl_object.cpp" />
     <ClCompile Include="program\library\sgl_soundHandler.cpp" />
@@ -311,7 +310,6 @@
     <ClInclude Include="program\library\sgl_component.h" />
     <ClInclude Include="program\library\sgl_DirectXUtility.h" />
     <ClInclude Include="program\library\sgl_fpsCamera.h" />
-    <ClInclude Include="program\library\sgl_inputHandler.h" />
     <ClInclude Include="program\library\sgl_lang_extention.h" />
     <ClInclude Include="program\library\sgl_level.h" />
     <ClInclude Include="program\library\sgl_module.h" />
@@ -343,6 +341,7 @@
     <ClInclude Include="program\library\tnl_vector2f.h" />
     <ClInclude Include="program\library\tnl_vector2i.h" />
     <ClInclude Include="program\library\tnl_vector3.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkEngine.h" />
     <ClInclude Include="program\tnl_build_setting.h" />
     <ClInclude Include="ResourceConstantHedder.h" />
   </ItemGroup>

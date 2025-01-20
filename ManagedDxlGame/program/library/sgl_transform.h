@@ -1,10 +1,11 @@
+#include "sgl_object.h"
 #include "tnl_vector3.h"
 #include "tnl_quaternion.h"
 #include "sgl_lang_extention.h"
 
 #pragma once
 /// <summary> トランスフォーム </summary>
-class Transform
+class Transform final : public Object
 {
 private:
 	tnl::Vector3 m_position;

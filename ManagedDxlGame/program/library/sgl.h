@@ -5,7 +5,6 @@
 #include "sgl_component.h"
 #include "sgl_DirectXUtility.h"
 #include "sgl_fpsCamera.h"
-#include "sgl_inputHandler.h"
 #include "sgl_lang_extention.h"
 #include "sgl_level.h"
 #include "sgl_module.h"

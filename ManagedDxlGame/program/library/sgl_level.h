@@ -8,7 +8,7 @@
 class Actor;
 
 // Unityでいうシーン、すべてのアクタが存在するクラス。
-class Level final : IModule , std::enable_shared_from_this<Level> {
+class Level : IModule , std::enable_shared_from_this<Level> {
 private:
 	std::list<std::shared_ptr<Actor>> m_actors;
 public:

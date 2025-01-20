@@ -236,9 +236,6 @@
     <ClCompile Include="program\library\sgl_fpsCamera.cpp">
       <Filter>program\[000] library</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\sgl_inputHandler.cpp">
-      <Filter>program\[000] library</Filter>
-    </ClCompile>
     <ClCompile Include="program\library\sgl_level.cpp">
       <Filter>program\[000] library</Filter>
     </ClCompile>
@@ -593,9 +590,6 @@
     <ClInclude Include="program\library\sgl_fpsCamera.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\sgl_inputHandler.h">
-      <Filter>program\[000] library</Filter>
-    </ClInclude>
     <ClInclude Include="program\library\sgl_lang_extention.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
@@ -622,6 +616,9 @@
     </ClInclude>
     <ClInclude Include="program\library\sgl_transform.h">
       <Filter>program\[000] library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkEngine.h">
+      <Filter>program\[003]engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

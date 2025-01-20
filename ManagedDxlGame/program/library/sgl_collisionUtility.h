@@ -1,10 +1,5 @@
 ﻿#pragma once
-#include "vector"
-#include "math.h"
-#include "limits.h"
-#include "DirectXMath.h"
 #include "tnl_vector3.h"
-#include "sgl_component.h"
 #include "DirectXCollision.h" // DirectX::BoundingSphere , DirectX::BoundingOrientedBox
 /// <summary> 重なり合わせ </summary>
 class Overlaps {
