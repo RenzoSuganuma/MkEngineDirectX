@@ -15,6 +15,7 @@ namespace MkEngine
 
 	void Component::Update(float deltaTime)
 	{
+		DxLib::DrawString(0, 0, "component", -1);
 	}
 
 	void Component::Finalize()

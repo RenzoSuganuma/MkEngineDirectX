@@ -58,23 +58,5 @@ namespace MkEngine
 
 		/// <summary> レベルの割り当て NOTE: 生ポインタからスマートポインタを生成すつので生ポインタ渡し </summary>
 		void const SetPlacedLevel(Level* level);
-
-		/// <summary> コンポーネントの取得 </summary>
-		template<typename T>
-		static T GetComponent(const std::shared_ptr<Actor>& getComponentFrom)
-		{
-			auto it = getComponentFrom->m_components.begin();
-			while (it != getComponentFrom->m_components.end())
-			{
-				auto r = static_cast<T>((*it).get());
-				if (r != nullptr)
-				{
-					return r;
-					break;
-				}
-				it++;
-			}
-			return nullptr;
-		}
 	};
 }
