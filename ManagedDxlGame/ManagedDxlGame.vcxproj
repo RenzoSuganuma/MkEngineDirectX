@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp" />
+    <ClCompile Include="MkObject.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />
     <ClCompile Include="program\dxe\dxe_camera.cpp" />
     <ClCompile Include="program\dxe\dxe_data.cpp" />
@@ -341,7 +342,9 @@
     <ClInclude Include="program\library\tnl_vector2f.h" />
     <ClInclude Include="program\library\tnl_vector2i.h" />
     <ClInclude Include="program\library\tnl_vector3.h" />
-    <ClInclude Include="program\MasterKeyEngine\MkEngine.h" />
+    <ClInclude Include="program\MasterKeyEngine\dxe_sgl_header.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkLevel.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkObject.h" />
     <ClInclude Include="program\tnl_build_setting.h" />
     <ClInclude Include="ResourceConstantHedder.h" />
   </ItemGroup>

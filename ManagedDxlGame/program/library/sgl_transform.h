@@ -5,7 +5,7 @@
 
 #pragma once
 /// <summary> トランスフォーム </summary>
-class Transform final : public Object
+class Transform : public Object
 {
 private:
 	tnl::Vector3 m_position;

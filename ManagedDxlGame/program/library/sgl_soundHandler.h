@@ -4,22 +4,18 @@
 #include "string"
 #include "unordered_map"
 
-namespace sgl::runtime::system 
+// サウンド再生モード
+enum class SoundPlayMode
 {
-	// サウンド再生モード
-	enum class SoundPlayMode 
-	{
-		Normal,
-		BackGround,
-		Loop
-	};
+	Normal,
+	BackGround,
+	Loop
+};
 
-	extern std::unordered_map< std::string, int > soundHandlers;
+extern std::unordered_map< std::string, int > soundHandlers;
 
-	extern const void LoadSoundToMemory(const std::string filePath, const std::string soundKey);
+extern const void LoadSoundToMemory(const std::string filePath, const std::string soundKey);
 
-	extern void PlaySoundFromMemory(const int soundHandler, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);
+extern void PlaySoundFromMemory(const int soundHandler, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);
 
-	extern void PlaySoundFromMemory(const std::string soundKey, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);
-}
-
+extern void PlaySoundFromMemory(const std::string soundKey, const SoundPlayMode soundPlayMode = SoundPlayMode::BackGround);

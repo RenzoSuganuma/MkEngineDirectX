@@ -1,9 +1,12 @@
 ﻿#pragma once
+
 #include "tnl_vector3.h"
 #include "DirectXCollision.h" // DirectX::BoundingSphere , DirectX::BoundingOrientedBox
+
 /// <summary> 重なり合わせ </summary>
 class Overlaps {
 public:
+
 	// ２円または球の当たり判定
 	static const bool CheckSphereOverlap(tnl::Vector3& pos1, tnl::Vector3& pos2, float r1, float r2) {
 		float center_distance = (pos1 - pos2).length();
