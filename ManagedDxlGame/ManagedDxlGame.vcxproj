@@ -339,7 +339,6 @@
     <ClInclude Include="program\library\tnl_vector2f.h" />
     <ClInclude Include="program\library\tnl_vector2i.h" />
     <ClInclude Include="program\library\tnl_vector3.h" />
-    <ClInclude Include="program\MasterKeyEngine\dxe_sgl_header.h" />
     <ClInclude Include="program\MasterKeyEngine\MkActor.h" />
     <ClInclude Include="program\MasterKeyEngine\MkAudioUtil.h" />
     <ClInclude Include="program\MasterKeyEngine\MkCamera.h" />

@@ -1,5 +1,7 @@
 ﻿#pragma once
+
 #include "memory"
+
 #include "sgl_module.h"
 #include "sgl_lang_extention.h"
 
@@ -11,11 +13,16 @@ namespace MkEngine
 	/// <summary> コンポーネント </summary>
 	class Component : public IModule, std::enable_shared_from_this<Component> {
 	protected:
+
+		/// <summary> アタッチされたアクター </summary>
 		std::shared_ptr<Actor> m_attachedActor;
+		/// <summary> 有効ならライフサイクルが有効 </summary>
 		bool m_enabled = true;
+		/// <summary> MkEngine::Componentの別名 </summary>
 		using base = Component;
 
 	public:
+
 		DEFCrt_shrd_ptr(Component)
 
 		AutoProperty(bool, Enabled, m_enabled)

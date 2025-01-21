@@ -1,7 +1,9 @@
 ﻿#pragma once
+
 #include "list"
 #include "memory"
 #include "string"
+
 #include "DxLib.h"
 #include "sgl_module.h"
 #include "sgl_transform.h"
@@ -12,18 +14,25 @@ namespace MkEngine
 	class Level;
 	class Component;
 
-	/// <summary> ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで </summary>
+	/// <summary> ゲーム内のオブジェクトとして扱うクラスの基底クラス NOTE: インスタンスはスマートポインタで </summary>
 	class Actor : public IModule, std::enable_shared_from_this<Actor> {
 	protected:
-		std::list<std::shared_ptr<Component>> m_components;
-		std::shared_ptr<Level> m_placedLevel;
 
+		/// <summary> コンポーネント </summary>
+		std::list<std::shared_ptr<Component>> m_components;
+		/// <summary> 配置されたレベル </summary>
+		std::shared_ptr<Level> m_placedLevel;
+		/// <summary> 配置されたレベル </summary>
 		Transform m_transform;
+		/// <summary> アクターの名前 </summary>
 		std::string m_name = "";
+		/// <summary> 有効ならライフサイクルは有効 </summary>
 		bool m_enabled = true;
+		/// <summary> MkEngine::Actorの別名 </summary>
 		using base = Actor;
 
 	public:
+
 		AutoProperty(Transform, Transform, m_transform)
 
 		AutoProperty(std::string, Name, m_name)

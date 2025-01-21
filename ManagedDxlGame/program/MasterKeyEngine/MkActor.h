@@ -2,8 +2,9 @@
 
 #include "memory"
 #include "concepts"
+
+#include "../library/sgl_actor.h"
 #include "MkComponent.h"
-#include "dxe_sgl_header.h"
 
 namespace MkEngine
 {
@@ -36,7 +37,7 @@ namespace MkEngine
 			while (i != m_components.end())
 			{
 				auto r = dynamic_cast<DerivedTy*>((*i).get());
-				if (r != nullptr)
+				if (r not_eq nullptr)
 				{
 					return r;
 					break;

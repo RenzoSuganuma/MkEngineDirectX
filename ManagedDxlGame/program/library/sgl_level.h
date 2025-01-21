@@ -12,14 +12,16 @@ namespace MkEngine
 	// Unityでいうシーン、すべてのアクタが存在するクラス。
 	class Level : IModule, std::enable_shared_from_this<Level> {
 	private:
+
+		/// <summary> レベル上のアクターの配列 </summary>
 		std::list<std::shared_ptr<Actor>> m_actors;
 	public:
+
 		Level();
 		~Level();
 
 		DEFCrt_shrd_ptr(Level)
 
-	public:
 		void  Initialize() override;
 
 		void  Update(float deltaTime) override;
@@ -30,10 +32,14 @@ namespace MkEngine
 
 		void  MemRelease() override;
 
+		/// <summary> レベル上のアクターのリストを表示する </summary>
 		void DrawActorList();
-		const std::list< std::shared_ptr<Actor> >::iterator
+
+		/// <summary> レベル上にアクターを配置する </summary>
+		const std::list<std::shared_ptr<Actor>>::iterator
 			const AddActor(const std::shared_ptr<Actor>& obj);
 
+		/// <summary> レベル上のアクターを削除する </summary>
 		void const RemoveActor(const std::shared_ptr<Actor>& obj);
 	};
 }

@@ -611,9 +611,6 @@
     <ClInclude Include="program\library\sgl_transform.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
-    <ClInclude Include="program\MasterKeyEngine\dxe_sgl_header.h">
-      <Filter>program\[003]engine</Filter>
-    </ClInclude>
     <ClInclude Include="program\MasterKeyEngine\MkObject.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>

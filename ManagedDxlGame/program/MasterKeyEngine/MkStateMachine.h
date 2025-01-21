@@ -1,6 +1,6 @@
 #pragma once
 
-#include "dxe_sgl_header.h"
+#include "../library/sgl_stateMachine.h"
 
 namespace MkEngine
 {

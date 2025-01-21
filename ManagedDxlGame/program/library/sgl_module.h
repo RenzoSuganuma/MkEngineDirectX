@@ -4,7 +4,7 @@
 
 namespace MkEngine
 {
-	/// <summary> タスクシステムに組み込めるもの </summary>
+	/// <summary> タスクシステムに組み込めるもののインタフェース </summary>
 	class IModule : public Object
 	{
 	public:
