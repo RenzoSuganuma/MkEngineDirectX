@@ -2,40 +2,42 @@
 #include "sgl_actor.h"
 #include "sgl_component.h"
 
-Component::Component() {}
-
-Component::~Component() {}
-
-void Component::Initialize()
+namespace MkEngine
 {
-	m_enabled = true;
-}
+	Component::Component() {}
 
-void Component::Update(float deltaTime)
-{
-}
+	Component::~Component() {}
 
-void Component::Finalize()
-{
-	m_attachedActor = nullptr;
-	m_enabled = false;
-}
+	void Component::Initialize()
+	{
+		m_enabled = true;
+	}
 
-void Component::DrawGraphics()
-{
-}
+	void Component::Update(float deltaTime)
+	{
+	}
 
-void Component::MemRelease()
-{
-}
+	void Component::Finalize()
+	{
+		m_attachedActor = nullptr;
+		m_enabled = false;
+	}
 
-const std::shared_ptr<Actor> const Component::GetActor() const
-{
-	return m_attachedActor;
-}
+	void Component::DrawGraphics()
+	{
+	}
 
-void const Component::SetActor(Actor * actor)
-{
-	m_attachedActor.reset(actor);
-}
+	void Component::MemRelease()
+	{
+	}
 
+	const std::shared_ptr<Actor> const Component::GetActor() const
+	{
+		return m_attachedActor;
+	}
+
+	void const Component::SetActor(Actor* actor)
+	{
+		m_attachedActor.reset(actor);
+	}
+}

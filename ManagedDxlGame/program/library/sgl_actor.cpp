@@ -3,80 +3,83 @@
 #include "sgl_component.h"
 #include "sgl_level.h"
 
-Actor::Actor() {}
-
-Actor::~Actor() {}
-
-void Actor::Initialize()
+namespace MkEngine
 {
-	auto it = m_components.begin();
-	while (it != m_components.end())
+	Actor::Actor() {}
+
+	Actor::~Actor() {}
+
+	void Actor::Initialize()
 	{
-		(*it)->Initialize();
-		it++;
+		auto it = m_components.begin();
+		while (it != m_components.end())
+		{
+			(*it)->Initialize();
+			it++;
+		}
+		m_enabled = true;
 	}
-	m_enabled = true;
-}
 
-void Actor::Update(float deltaTime)
-{
-	auto it = m_components.begin();
-	while (it != m_components.end())
+	void Actor::Update(float deltaTime)
 	{
-		(*it)->Update(deltaTime);
-		it++;
+		auto it = m_components.begin();
+		while (it != m_components.end())
+		{
+			(*it)->Update(deltaTime);
+			it++;
+		}
 	}
-}
 
-void Actor::DrawGraphics()
-{
-	auto it = m_components.begin();
-	while (it != m_components.end())
+	void Actor::DrawGraphics()
 	{
-		(*it)->DrawGraphics();
-		it++;
+		auto it = m_components.begin();
+		while (it != m_components.end())
+		{
+			(*it)->DrawGraphics();
+			it++;
+		}
 	}
-}
 
-void Actor::MemRelease()
-{
-	auto it = m_components.begin();
-	while (it != m_components.end())
+	void Actor::MemRelease()
 	{
-		(*it)->MemRelease();
-		it++;
+		auto it = m_components.begin();
+		while (it != m_components.end())
+		{
+			(*it)->MemRelease();
+			it++;
+		}
+		m_components.clear();
 	}
-	m_components.clear();
-}
 
-void Actor::Finalize()
-{
-	auto it = m_components.begin();
-	while (it != m_components.end())
+	void Actor::Finalize()
 	{
-		(*it)->Finalize();
-		it++;
+		auto it = m_components.begin();
+		while (it != m_components.end())
+		{
+			(*it)->Finalize();
+			it++;
+		}
+		m_enabled = false;
+		m_placedLevel = nullptr;
 	}
-	m_enabled = false;
-	m_placedLevel = nullptr;
-}
 
-std::list<std::shared_ptr<Component>>::iterator
-const Actor::AddComponent(const std::shared_ptr<Component>& component)
-{
-	component->SetActor(this);
-	m_components.emplace_back(component);
-	auto it = m_components.end();
-	it--;
-	return it;
-}
+	std::list<std::shared_ptr<Component>>::iterator
+		const Actor::AddComponent(const std::shared_ptr<Component>& component)
+	{
+		component->SetActor(this);
+		m_components.emplace_back(component);
+		auto it = m_components.end();
+		it--;
+		return it;
+	}
 
-void const Actor::RemoveComponent(const std::list<std::shared_ptr<Component>>::iterator place)
-{
-	m_components.erase(place);
-}
+	void const Actor::RemoveComponent(const std::list<std::shared_ptr<Component>>::iterator place)
+	{
+		m_components.erase(place);
+	}
 
-void const Actor::SetPlacedLevel(Level* level)
-{
-	m_placedLevel.reset(level);
+	void const Actor::SetPlacedLevel(Level* level)
+	{
+		m_placedLevel.reset(level);
+	}
 }

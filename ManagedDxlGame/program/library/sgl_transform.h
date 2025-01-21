@@ -4,18 +4,22 @@
 #include "sgl_lang_extention.h"
 
 #pragma once
-/// <summary> トランスフォーム </summary>
-class Transform : public Object
+
+namespace MkEngine
 {
-private:
-	tnl::Vector3 m_position;
-	tnl::Quaternion m_rotation;
+	/// <summary> トランスフォーム </summary>
+	class Transform : public Object
+	{
+	private:
+		tnl::Vector3 m_position;
+		tnl::Quaternion m_rotation;
 
-public:
-	AutoProperty(tnl::Vector3, Position, m_position)
-		AutoProperty(tnl::Quaternion, Rotation, m_rotation)
+	public:
+		AutoProperty(tnl::Vector3, Position, m_position)
+			AutoProperty(tnl::Quaternion, Rotation, m_rotation)
 
-		void RotateAxis(const tnl::Vector3& axis, float angle) {
-		m_rotation *= tnl::Quaternion::RotationAxis(axis, angle);
-	}
-};
+			void RotateAxis(const tnl::Vector3& axis, float angle) {
+			m_rotation *= tnl::Quaternion::RotationAxis(axis, angle);
+		}
+	};
+}

@@ -152,7 +152,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp" />
-    <ClCompile Include="MkObject.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />
     <ClCompile Include="program\dxe\dxe_camera.cpp" />
     <ClCompile Include="program\dxe\dxe_data.cpp" />
@@ -202,7 +201,6 @@
     <ClCompile Include="program\library\sgl_fpsCamera.cpp" />
     <ClCompile Include="program\library\sgl_level.cpp" />
     <ClCompile Include="program\library\sgl_object.cpp" />
-    <ClCompile Include="program\library\sgl_soundHandler.cpp" />
     <ClCompile Include="program\library\sgl_stateMachine.cpp" />
     <ClCompile Include="program\library\sgl_transform.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />
@@ -316,7 +314,6 @@
     <ClInclude Include="program\library\sgl_module.h" />
     <ClInclude Include="program\library\sgl_object.h" />
     <ClInclude Include="program\library\sgl_smTransition.h" />
-    <ClInclude Include="program\library\sgl_soundHandler.h" />
     <ClInclude Include="program\library\sgl_stateMachine.h" />
     <ClInclude Include="program\library\sgl_stateMachineBehaviour.h" />
     <ClInclude Include="program\library\sgl_transform.h" />
@@ -343,8 +340,18 @@
     <ClInclude Include="program\library\tnl_vector2i.h" />
     <ClInclude Include="program\library\tnl_vector3.h" />
     <ClInclude Include="program\MasterKeyEngine\dxe_sgl_header.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkActor.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkAudioUtil.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkCamera.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkCollision.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkDxUtil.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkComponent.h" />
     <ClInclude Include="program\MasterKeyEngine\MkLevel.h" />
     <ClInclude Include="program\MasterKeyEngine\MkObject.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkSMBehaviour.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkSMTransition.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkStateMachine.h" />
+    <ClInclude Include="program\MasterKeyEngine\MkTransform.h" />
     <ClInclude Include="program\tnl_build_setting.h" />
     <ClInclude Include="ResourceConstantHedder.h" />
   </ItemGroup>

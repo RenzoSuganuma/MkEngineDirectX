@@ -242,17 +242,11 @@
     <ClCompile Include="program\library\sgl_object.cpp">
       <Filter>program\[000] library</Filter>
     </ClCompile>
-    <ClCompile Include="program\library\sgl_soundHandler.cpp">
-      <Filter>program\[000] library</Filter>
-    </ClCompile>
     <ClCompile Include="program\library\sgl_stateMachine.cpp">
       <Filter>program\[000] library</Filter>
     </ClCompile>
     <ClCompile Include="program\library\sgl_transform.cpp">
       <Filter>program\[000] library</Filter>
-    </ClCompile>
-    <ClCompile Include="MkObject.cpp">
-      <Filter>program</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -608,9 +602,6 @@
     <ClInclude Include="program\library\sgl_smTransition.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
-    <ClInclude Include="program\library\sgl_soundHandler.h">
-      <Filter>program\[000] library</Filter>
-    </ClInclude>
     <ClInclude Include="program\library\sgl_stateMachine.h">
       <Filter>program\[000] library</Filter>
     </ClInclude>
@@ -627,6 +618,36 @@
       <Filter>program\[003]engine</Filter>
     </ClInclude>
     <ClInclude Include="program\MasterKeyEngine\MkLevel.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkActor.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkTransform.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkComponent.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkCollision.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkDxUtil.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkCamera.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkSMTransition.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkStateMachine.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkSMBehaviour.h">
+      <Filter>program\[003]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MasterKeyEngine\MkAudioUtil.h">
       <Filter>program\[003]engine</Filter>
     </ClInclude>
   </ItemGroup>

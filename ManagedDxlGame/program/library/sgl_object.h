@@ -1,7 +1,10 @@
 #pragma once
 
-/// <summary> 型のルート </summary>
-class Object
+namespace MkEngine
 {
+	/// <summary> 型のルート </summary>
+	class Object
+	{
 
-};
+	};
+}

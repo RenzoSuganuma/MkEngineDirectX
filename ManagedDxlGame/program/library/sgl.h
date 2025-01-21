@@ -10,7 +10,6 @@
 #include "sgl_module.h"
 #include "sgl_object.h"
 #include "sgl_smTransition.h"
-#include "sgl_soundHandler.h"
 #include "sgl_stateMachine.h"
 #include "sgl_stateMachineBehaviour.h"
 #include "sgl_transform.h"

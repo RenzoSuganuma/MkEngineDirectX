@@ -4,7 +4,7 @@
 
 namespace MkEngine
 {
-	class MkComponent : public Component
+	struct MkComponent : public Component
 	{
 
 	};
